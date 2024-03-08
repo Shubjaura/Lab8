@@ -54,7 +54,7 @@ public class CustomListTest {
         list = MockCityList();
         City city = new City("Montreal", "Quebec");
 
-        list.add(city);
+        list.addCity(city);
         assertTrue(list.hasCity(city), "City should be in the list before deletion.");
 
         list.delete(city);
