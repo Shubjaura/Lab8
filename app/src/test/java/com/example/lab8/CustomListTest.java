@@ -42,8 +42,11 @@ public class CustomListTest {
     void testHasCity() {
         list = MockCityList();
         City city1 = new City("Winnipeg", "Manitoba");
+        City city2 = new City("Calgary", "Alberta");
+
         list.addCity(city1);
         assertTrue(list.hasCity(city1), "City should be found in the list.");
+        assertFalse(list.hasCity(city2), "City should be not found in the list.");
     }
 
 }
