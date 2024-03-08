@@ -49,4 +49,15 @@ public class CustomListTest {
         assertFalse(list.hasCity(city2), "City should be not found in the list.");
     }
 
+    @Test
+    void testDeleteCity() {
+        list = MockCityList();
+        City city = new City("Montreal", "Quebec");
+
+        list.add(city);
+        assertTrue(list.hasCity(city), "City should be in the list before deletion.");
+
+        list.delete(city);
+        assertFalse(list.hasCity(city), "City should be removed from the list.");
+    }
 }
